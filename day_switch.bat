@@ -1,5 +1,7 @@
+@echo off
 for /F %%i in (.env) do set %%i
-cd %ADBPATH%
+set PATH=%PATH%;%ADBPATH%
+
 :a
 adb shell am start -a android.settings.SETTINGS
 adb shell input tap  712 555
